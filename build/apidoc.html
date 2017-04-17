@@ -51,7 +51,7 @@
 
         href="https://github.com/rebelmail/node-lambda#readme"
 
-    >node-lambda (v0.8.15)</a>
+    >node-lambda (v0.9.0)</a>
 </h1>
 <h4>Command line tool for locally running and remotely deploying your node.js applications to Amazon Lambda.</h4>
 <div class="apidocSectionDiv"><a
@@ -63,7 +63,120 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events">
+            function <span class="apidocSignatureSpan">node-lambda.</span>schedule_events
+            <span class="apidocSignatureSpan">(aws)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-lambda.</span>schedule_events.prototype</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-lambda.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-lambda.schedule_events">module node-lambda.schedule_events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.schedule_events">
+            function <span class="apidocSignatureSpan">node-lambda.</span>schedule_events
+            <span class="apidocSignatureSpan">(aws)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-lambda.schedule_events.prototype">module node-lambda.schedule_events.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._addPermission">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_addPermission
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._addPermissionParams">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_addPermissionParams
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._functionName">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_functionName
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._putRule">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putRule
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._putRulePrams">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putRulePrams
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._putTargets">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putTargets
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._putTargetsParams">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putTargetsParams
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype._ruleDescription">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_ruleDescription
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.schedule_events.prototype.add">
+            function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>add
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
 
         </li>
 
@@ -74,6 +187,371 @@
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.node-lambda" id="apidoc.module.node-lambda">module node-lambda</a></h1>
 
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events" id="apidoc.element.node-lambda.schedule_events">
+        function <span class="apidocSignatureSpan">node-lambda.</span>schedule_events
+        <span class="apidocSignatureSpan">(aws)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">schedule_events = function (aws) {
+  // Authenticated `aws` object in `lib/main.js`
+  this.lambda = new aws.Lambda({
+    apiVersion: &#x27;2015-03-31&#x27;
+  });
+  this.cloudwatchevents = new aws.CloudWatchEvents({
+    apiVersion: &#x27;2015-10-07&#x27;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-lambda.schedule_events" id="apidoc.module.node-lambda.schedule_events">module node-lambda.schedule_events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.schedule_events" id="apidoc.element.node-lambda.schedule_events.schedule_events">
+        function <span class="apidocSignatureSpan">node-lambda.</span>schedule_events
+        <span class="apidocSignatureSpan">(aws)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">schedule_events = function (aws) {
+  // Authenticated `aws` object in `lib/main.js`
+  this.lambda = new aws.Lambda({
+    apiVersion: &#x27;2015-03-31&#x27;
+  });
+  this.cloudwatchevents = new aws.CloudWatchEvents({
+    apiVersion: &#x27;2015-10-07&#x27;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-lambda.schedule_events.prototype" id="apidoc.module.node-lambda.schedule_events.prototype">module node-lambda.schedule_events.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._addPermission" id="apidoc.element.node-lambda.schedule_events.prototype._addPermission">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_addPermission
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_addPermission = function (params) {
+  const _this = this;
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this._addPermissionParams(params);
+    _this.lambda.addPermission(_params, (err, data) =&#x3e; {
+      if (err) {
+        if (err.code != &#x27;ResourceConflictException&#x27;) throw err;
+        // If it exists it will result in an error but there is no problem.
+        resolve(&#x27;Already exists permission&#x27;);
+      }
+      resolve(data);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+
+  add: function(params) {
+    const _this = this;
+    return Promise.resolve().then(() =&#x3e; {
+      return _this._putRule(params);
+    }).then((rule) =&#x3e; {
+      return _this.<span class="apidocCodeKeywordSpan">_addPermission</span>(Object.assign(params, rule));
+    }).then((data) =&#x3e; {
+      return _this._putTargets(params);
+    });
+  },
+};
+
+module.exports = ScheduleEvents;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._addPermissionParams" id="apidoc.element.node-lambda.schedule_events.prototype._addPermissionParams">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_addPermissionParams
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_addPermissionParams = function (params) {
+  return {
+    Action: &#x27;lambda:InvokeFunction&#x27;,
+    FunctionName: this._functionName(params),
+    Principal: &#x27;events.amazonaws.com&#x27;,
+    SourceArn: params.RuleArn,
+    StatementId: params.ScheduleName
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    StatementId: params.ScheduleName
+  };
+},
+
+_addPermission: function(params) {
+  const _this = this;
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this.<span class="apidocCodeKeywordSpan">_addPermissionParams</span>(params);
+    _this.lambda.addPermission(_params, (err, data) =&#x3e; {
+      if (err) {
+        if (err.code != &#x27;ResourceConflictException&#x27;) throw err;
+        // If it exists it will result in an error but there is no problem.
+        resolve(&#x27;Already exists permission&#x27;);
+      }
+      resolve(data);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._functionName" id="apidoc.element.node-lambda.schedule_events.prototype._functionName">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_functionName
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(params) =&#x3e; {
+  return params.FunctionArn.split(&#x27;:&#x27;).pop();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  });
+},
+
+_addPermissionParams: function(params) {
+  return {
+    Action: &#x27;lambda:InvokeFunction&#x27;,
+    FunctionName: this.<span class="apidocCodeKeywordSpan">_functionName</span>(params),
+    Principal: &#x27;events.amazonaws.com&#x27;,
+    SourceArn: params.RuleArn,
+    StatementId: params.ScheduleName
+  };
+},
+
+_addPermission: function(params) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._putRule" id="apidoc.element.node-lambda.schedule_events.prototype._putRule">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putRule
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_putRule = function (params) {
+  const _this = this;
+  // return RuleArn if created
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this._putRulePrams(params);
+    _this.cloudwatchevents.putRule(_params, (err, rule) =&#x3e; {
+      if (err) throw err;
+      resolve(rule);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      });
+    });
+  },
+
+  add: function(params) {
+    const _this = this;
+    return Promise.resolve().then(() =&#x3e; {
+      return _this.<span class="apidocCodeKeywordSpan">_putRule</span>(params);
+    }).then((rule) =&#x3e; {
+      return _this._addPermission(Object.assign(params, rule));
+    }).then((data) =&#x3e; {
+      return _this._putTargets(params);
+    });
+  },
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._putRulePrams" id="apidoc.element.node-lambda.schedule_events.prototype._putRulePrams">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putRulePrams
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_putRulePrams = function (params) {
+  return {
+    Name: params.ScheduleName,
+    Description: this._ruleDescription(params),
+    State: params.ScheduleState,
+    ScheduleExpression: params.ScheduleExpression
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+},
+
+_putRule: function(params) {
+  const _this = this;
+  // return RuleArn if created
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this.<span class="apidocCodeKeywordSpan">_putRulePrams</span>(params);
+    _this.cloudwatchevents.putRule(_params, (err, rule) =&#x3e; {
+      if (err) throw err;
+      resolve(rule);
+    });
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._putTargets" id="apidoc.element.node-lambda.schedule_events.prototype._putTargets">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putTargets
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_putTargets = function (params) {
+  const _this = this;
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this._putTargetsParams(params);
+    _this.cloudwatchevents.putTargets(_params, (err, data) =&#x3e; {
+      // even if it is already registered, it will not be an error.
+      if (err) throw(err);
+      resolve(data);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  add: function(params) {
+    const _this = this;
+    return Promise.resolve().then(() =&#x3e; {
+      return _this._putRule(params);
+    }).then((rule) =&#x3e; {
+      return _this._addPermission(Object.assign(params, rule));
+    }).then((data) =&#x3e; {
+      return _this.<span class="apidocCodeKeywordSpan">_putTargets</span>(params);
+    });
+  },
+};
+
+module.exports = ScheduleEvents;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._putTargetsParams" id="apidoc.element.node-lambda.schedule_events.prototype._putTargetsParams">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_putTargetsParams
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_putTargetsParams = function (params) {
+  return {
+    Rule: params.ScheduleName,
+    Targets: [{
+      Arn: params.FunctionArn,
+      Id: this._functionName(params)
+    }]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }]
+  };
+},
+
+_putTargets: function(params) {
+  const _this = this;
+  return new Promise((resolve) =&#x3e; {
+    const _params = _this.<span class="apidocCodeKeywordSpan">_putTargetsParams</span>(params);
+    _this.cloudwatchevents.putTargets(_params, (err, data) =&#x3e; {
+      // even if it is already registered, it will not be an error.
+      if (err) throw(err);
+      resolve(data);
+    });
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype._ruleDescription" id="apidoc.element.node-lambda.schedule_events.prototype._ruleDescription">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>_ruleDescription
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(params) =&#x3e; {
+  return `${params.ScheduleName} - ${params.ScheduleExpression}`;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+_functionName: (params) =&#x3e; {
+  return params.FunctionArn.split(&#x27;:&#x27;).pop();
+},
+
+_putRulePrams: function(params) {
+  return {
+    Name: params.ScheduleName,
+    Description: this.<span class="apidocCodeKeywordSpan">_ruleDescription</span>(params),
+    State: params.ScheduleState,
+    ScheduleExpression: params.ScheduleExpression
+  };
+},
+
+_putRule: function(params) {
+  const _this = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.schedule_events.prototype.add" id="apidoc.element.node-lambda.schedule_events.prototype.add">
+        function <span class="apidocSignatureSpan">node-lambda.schedule_events.prototype.</span>add
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (params) {
+  const _this = this;
+  return Promise.resolve().then(() =&#x3e; {
+    return _this._putRule(params);
+  }).then((rule) =&#x3e; {
+    return _this._addPermission(Object.assign(params, rule));
+  }).then((data) =&#x3e; {
+    return _this._putTargets(params);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>

@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/rebelmail/node-lambda#readme"
-
-    >node-lambda (v0.9.0)</a>
+    <a href="https://github.com/rebelmail/node-lambda#readme">node-lambda (v0.9.0)</a>
 </h1>
 <h4>Command line tool for locally running and remotely deploying your node.js applications to Amazon Lambda.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.node-lambda">module node-lambda</a><ol>
 
@@ -198,10 +191,10 @@
     <li>description and source-code<pre class="apidocCodePre">schedule_events = function (aws) {
   // Authenticated `aws` object in `lib/main.js`
   this.lambda = new aws.Lambda({
-    apiVersion: &#x27;2015-03-31&#x27;
+    apiVersion: '2015-03-31'
   });
   this.cloudwatchevents = new aws.CloudWatchEvents({
-    apiVersion: &#x27;2015-10-07&#x27;
+    apiVersion: '2015-10-07'
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -228,10 +221,10 @@
     <li>description and source-code<pre class="apidocCodePre">schedule_events = function (aws) {
   // Authenticated `aws` object in `lib/main.js`
   this.lambda = new aws.Lambda({
-    apiVersion: &#x27;2015-03-31&#x27;
+    apiVersion: '2015-03-31'
   });
   this.cloudwatchevents = new aws.CloudWatchEvents({
-    apiVersion: &#x27;2015-10-07&#x27;
+    apiVersion: '2015-10-07'
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -253,13 +246,13 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_addPermission = function (params) {
   const _this = this;
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this._addPermissionParams(params);
-    _this.lambda.addPermission(_params, (err, data) =&#x3e; {
+    _this.lambda.addPermission(_params, (err, data) =&gt; {
       if (err) {
-        if (err.code != &#x27;ResourceConflictException&#x27;) throw err;
+        if (err.code != 'ResourceConflictException') throw err;
         // If it exists it will result in an error but there is no problem.
-        resolve(&#x27;Already exists permission&#x27;);
+        resolve('Already exists permission');
       }
       resolve(data);
     });
@@ -270,11 +263,11 @@
 
   add: function(params) {
     const _this = this;
-    return Promise.resolve().then(() =&#x3e; {
+    return Promise.resolve().then(() =&gt; {
       return _this._putRule(params);
-    }).then((rule) =&#x3e; {
+    }).then((rule) =&gt; {
       return _this.<span class="apidocCodeKeywordSpan">_addPermission</span>(Object.assign(params, rule));
-    }).then((data) =&#x3e; {
+    }).then((data) =&gt; {
       return _this._putTargets(params);
     });
   },
@@ -295,9 +288,9 @@ module.exports = ScheduleEvents;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_addPermissionParams = function (params) {
   return {
-    Action: &#x27;lambda:InvokeFunction&#x27;,
+    Action: 'lambda:InvokeFunction',
     FunctionName: this._functionName(params),
-    Principal: &#x27;events.amazonaws.com&#x27;,
+    Principal: 'events.amazonaws.com',
     SourceArn: params.RuleArn,
     StatementId: params.ScheduleName
   };
@@ -309,13 +302,13 @@ module.exports = ScheduleEvents;
 
 _addPermission: function(params) {
   const _this = this;
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this.<span class="apidocCodeKeywordSpan">_addPermissionParams</span>(params);
-    _this.lambda.addPermission(_params, (err, data) =&#x3e; {
+    _this.lambda.addPermission(_params, (err, data) =&gt; {
       if (err) {
-        if (err.code != &#x27;ResourceConflictException&#x27;) throw err;
+        if (err.code != 'ResourceConflictException') throw err;
         // If it exists it will result in an error but there is no problem.
-        resolve(&#x27;Already exists permission&#x27;);
+        resolve('Already exists permission');
       }
       resolve(data);
 ...</pre></li>
@@ -330,8 +323,8 @@ _addPermission: function(params) {
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(params) =&#x3e; {
-  return params.FunctionArn.split(&#x27;:&#x27;).pop();
+    <li>description and source-code<pre class="apidocCodePre">(params) =&gt; {
+  return params.FunctionArn.split(':').pop();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     });
@@ -340,9 +333,9 @@ _addPermission: function(params) {
 
 _addPermissionParams: function(params) {
   return {
-    Action: &#x27;lambda:InvokeFunction&#x27;,
+    Action: 'lambda:InvokeFunction',
     FunctionName: this.<span class="apidocCodeKeywordSpan">_functionName</span>(params),
-    Principal: &#x27;events.amazonaws.com&#x27;,
+    Principal: 'events.amazonaws.com',
     SourceArn: params.RuleArn,
     StatementId: params.ScheduleName
   };
@@ -364,9 +357,9 @@ _addPermission: function(params) {
     <li>description and source-code<pre class="apidocCodePre">_putRule = function (params) {
   const _this = this;
   // return RuleArn if created
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this._putRulePrams(params);
-    _this.cloudwatchevents.putRule(_params, (err, rule) =&#x3e; {
+    _this.cloudwatchevents.putRule(_params, (err, rule) =&gt; {
       if (err) throw err;
       resolve(rule);
     });
@@ -379,11 +372,11 @@ _addPermission: function(params) {
 
   add: function(params) {
     const _this = this;
-    return Promise.resolve().then(() =&#x3e; {
+    return Promise.resolve().then(() =&gt; {
       return _this.<span class="apidocCodeKeywordSpan">_putRule</span>(params);
-    }).then((rule) =&#x3e; {
+    }).then((rule) =&gt; {
       return _this._addPermission(Object.assign(params, rule));
-    }).then((data) =&#x3e; {
+    }).then((data) =&gt; {
       return _this._putTargets(params);
     });
   },
@@ -415,9 +408,9 @@ _addPermission: function(params) {
 _putRule: function(params) {
   const _this = this;
   // return RuleArn if created
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this.<span class="apidocCodeKeywordSpan">_putRulePrams</span>(params);
-    _this.cloudwatchevents.putRule(_params, (err, rule) =&#x3e; {
+    _this.cloudwatchevents.putRule(_params, (err, rule) =&gt; {
       if (err) throw err;
       resolve(rule);
     });
@@ -437,9 +430,9 @@ _putRule: function(params) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_putTargets = function (params) {
   const _this = this;
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this._putTargetsParams(params);
-    _this.cloudwatchevents.putTargets(_params, (err, data) =&#x3e; {
+    _this.cloudwatchevents.putTargets(_params, (err, data) =&gt; {
       // even if it is already registered, it will not be an error.
       if (err) throw(err);
       resolve(data);
@@ -449,11 +442,11 @@ _putRule: function(params) {
     <li>example usage<pre class="apidocCodePre">...
   add: function(params) {
     const _this = this;
-    return Promise.resolve().then(() =&#x3e; {
+    return Promise.resolve().then(() =&gt; {
       return _this._putRule(params);
-    }).then((rule) =&#x3e; {
+    }).then((rule) =&gt; {
       return _this._addPermission(Object.assign(params, rule));
-    }).then((data) =&#x3e; {
+    }).then((data) =&gt; {
       return _this.<span class="apidocCodeKeywordSpan">_putTargets</span>(params);
     });
   },
@@ -488,9 +481,9 @@ module.exports = ScheduleEvents;
 
 _putTargets: function(params) {
   const _this = this;
-  return new Promise((resolve) =&#x3e; {
+  return new Promise((resolve) =&gt; {
     const _params = _this.<span class="apidocCodeKeywordSpan">_putTargetsParams</span>(params);
-    _this.cloudwatchevents.putTargets(_params, (err, data) =&#x3e; {
+    _this.cloudwatchevents.putTargets(_params, (err, data) =&gt; {
       // even if it is already registered, it will not be an error.
       if (err) throw(err);
       resolve(data);
@@ -509,12 +502,12 @@ _putTargets: function(params) {
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(params) =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">(params) =&gt; {
   return `${params.ScheduleName} - ${params.ScheduleExpression}`;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-_functionName: (params) =&#x3e; {
-  return params.FunctionArn.split(&#x27;:&#x27;).pop();
+_functionName: (params) =&gt; {
+  return params.FunctionArn.split(':').pop();
 },
 
 _putRulePrams: function(params) {
@@ -542,11 +535,11 @@ _putRule: function(params) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">add = function (params) {
   const _this = this;
-  return Promise.resolve().then(() =&#x3e; {
+  return Promise.resolve().then(() =&gt; {
     return _this._putRule(params);
-  }).then((rule) =&#x3e; {
+  }).then((rule) =&gt; {
     return _this._addPermission(Object.assign(params, rule));
-  }).then((data) =&#x3e; {
+  }).then((data) =&gt; {
     return _this._putTargets(params);
   });
 }</pre></li>
@@ -562,3 +555,4 @@ _putRule: function(params) {
     ]
 </div>
 </div>
+</body></html>
