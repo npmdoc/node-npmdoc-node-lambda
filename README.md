@@ -1,9 +1,11 @@
-# api documentation for  [node-lambda (v0.8.15)](https://github.com/rebelmail/node-lambda#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-lambda.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-lambda) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-lambda.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-lambda)
+# api documentation for  [node-lambda (v0.9.0)](https://github.com/rebelmail/node-lambda#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-lambda.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-lambda) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-lambda.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-lambda)
 #### Command line tool for locally running and remotely deploying your node.js applications to Amazon Lambda.
 
-[![NPM](https://nodei.co/npm/node-lambda.png?downloads=true)](https://www.npmjs.com/package/node-lambda)
+[![NPM](https://nodei.co/npm/node-lambda.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-lambda)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-node-lambda/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-node-lambda_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-lambda/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-node-lambda/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-node-lambda/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-node-lambda/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-lambda/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-node-lambda/build/screenCapture.npmPackageListing.svg)
 
@@ -36,6 +38,7 @@
     },
     "description": "Command line tool for locally running and remotely deploying your node.js applications to Amazon Lambda.",
     "devDependencies": {
+        "aws-sdk-mock": "^1.6.1",
         "chai": "^2.0.0",
         "hoek": "^2.11.1",
         "lodash": "^3.2.0",
@@ -46,10 +49,10 @@
         "test": "test"
     },
     "dist": {
-        "shasum": "ccca8432f606d41a792213642b39af7f207fdf09",
-        "tarball": "https://registry.npmjs.org/node-lambda/-/node-lambda-0.8.15.tgz"
+        "shasum": "b628257be2655caa674a5df1ec379e42a2b4467f",
+        "tarball": "https://registry.npmjs.org/node-lambda/-/node-lambda-0.9.0.tgz"
     },
-    "gitHead": "ce7f75377c7f172c9e83036337f98695371c6edd",
+    "gitHead": "57400510481390fe775325fb20f537c42ae01bb8",
     "homepage": "https://github.com/rebelmail/node-lambda#readme",
     "keywords": [
         "lambda",
@@ -65,17 +68,14 @@
     "main": "lib/main.js",
     "maintainers": [
         {
-            "name": "deviavir",
-            "email": "chase@sillevis.net"
+            "name": "deviavir"
         },
         {
-            "name": "motdotla",
-            "email": "mot@mot.la"
+            "name": "motdotla"
         }
     ],
     "name": "node-lambda",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/rebelmail/node-lambda.git"
@@ -83,20 +83,9 @@
     "scripts": {
         "test": "mocha test/*.js"
     },
-    "version": "0.8.15"
+    "version": "0.9.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module node-lambda](#apidoc.module.node-lambda)
-1.  string <span class="apidocSignatureSpan">node-lambda.</span>version
-
-
-
-# <a name="apidoc.module.node-lambda"></a>[module node-lambda](#apidoc.module.node-lambda)
 
 
 
