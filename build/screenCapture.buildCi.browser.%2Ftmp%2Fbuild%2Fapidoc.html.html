@@ -65,6 +65,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-lambda.</span>index</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-lambda.</span>schedule_events.prototype</span>
 
         </li>
@@ -72,6 +78,19 @@
         <li>
 
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-lambda.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-lambda.index">module node-lambda.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-lambda.index.handler">
+            function <span class="apidocSignatureSpan">node-lambda.index.</span>handler
+            <span class="apidocSignatureSpan">( event, context )</span>
+            </a>
 
         </li>
 
@@ -203,6 +222,33 @@
 
 
 
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-lambda.index" id="apidoc.module.node-lambda.index">module node-lambda.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-lambda.index.handler" id="apidoc.element.node-lambda.index.handler">
+        function <span class="apidocSignatureSpan">node-lambda.index.</span>handler
+        <span class="apidocSignatureSpan">( event, context )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handler = function ( event, context ) {
+  console.log( "Running index.handler" );
+  console.log( "==================================");
+  console.log( "event", event );
+  console.log( "==================================");
+  console.log( "Stopping index.handler" );
+  context.done( );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
@@ -543,7 +589,23 @@ _putRule: function(params) {
     return _this._putTargets(params);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+};
+
+Lambda.prototype._updateScheduleEvents = function (scheduleEvents, functionArn, scheduleList, cb) {
+return async.series(scheduleList.map(function(schedule) {
+  return function(_cb) {
+    const params = Object.assign(schedule, { FunctionArn: functionArn });
+    scheduleEvents.<span class="apidocCodeKeywordSpan">add</span>(params).then(function (data) {
+      _cb(null, params);
+    }).catch(function (err) {
+      _cb(err);
+    });
+  };
+}), function(err, results) {
+  cb(err, results);
+...</pre></li>
     </ul>
 
 
